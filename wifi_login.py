@@ -1,5 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
+import requests # type: ignore
+from bs4 import BeautifulSoup # type: ignore
 import time
 import re
 import creds
