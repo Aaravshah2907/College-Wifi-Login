@@ -47,6 +47,24 @@ Run the script:
 python wifi_login.py
 ```
 
+## 🌀 Alternative Method: Shell Script
+
+This project also provides a shell script for quick execution. After setting up your credentials in `creds.py`, you can use the `wifi_login.sh` script to automate the login process.
+
+Make the script executable:
+
+```bash
+chmod +x wifi_login.sh
+```
+
+Run the script:
+
+```bash
+./wifi_login.sh
+```
+
+This method is especially useful for users who prefer a command-line approach without directly invoking Python.
+
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
