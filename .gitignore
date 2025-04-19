@@ -1,2 +1,4 @@
 creds.py
 history_wifi_connection.txt
+__pycache__/
+*.pyc
