@@ -1,4 +1,4 @@
-# 🔐 Auto WiFi Login for BITS Pilani (macOS)
+# 🔐 Auto WiFi Login for BITS Pilani
 
 This Python script automates login to the BITS Pilani WiFi network. It handles the dynamic redirect process used by the network portal (`http://192.168.1.1/`) by extracting the required `4Tredir` parameter, sending login credentials via a POST request, and checking for internet connectivity.
 
@@ -10,14 +10,14 @@ This Python script automates login to the BITS Pilani WiFi network. It handles t
 - 📬 Submits login form using the `requests` library
 - ♻️ Retries until internet connection is successful
 - 🔐 Uses a separate `creds.py` file for storing credentials
-- 📋 Copies info to clipboard via `pbcopy` (optional)
+- 📋 Copies info to clipboard via `pbcopy` (optional for MacOS and Linux)
 
 ---
 
 ## 🧰 Requirements
 
 - Python 3.6+
-- Internet browser redirect must pass through `http://192.168.1.1/` (It redirects to login paage by default)
+- Internet browser redirect must pass through `http://192.168.1.1/` (It redirects to login page by default)
 
 Install Python dependencies:
 
