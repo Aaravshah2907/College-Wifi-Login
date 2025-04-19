@@ -8,10 +8,6 @@ import creds
 PORTAL_ENTRY = 'http://192.168.1.1'
 CHECK_URL = "http://clients3.google.com/generate_204"
 
-def add_page(page):
-    with open('history_wifi_connection.txt', 'a') as f:
-        f.write(page + '\n')
-
 def is_connected():
     try:
         response = requests.get(CHECK_URL, timeout=3)
@@ -75,8 +71,6 @@ def attempt_login():
 
     if "keepalive?" in login_resp.text or "success" in login_resp.text.lower():
         # print("✅ Logged in successfully!")
-        keepalivepage = extract_redirect_url(login_resp.text)
-        add_page(keepalivepage)
         '''
         subprocess.run("pbcopy", text=True, input=keepalivepage)
         # print("✅ Keep alive page added to clipboard")
