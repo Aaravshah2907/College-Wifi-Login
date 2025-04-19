@@ -16,9 +16,8 @@ This Python script automates login to the BITS Pilani WiFi network. It handles t
 
 ## 🧰 Requirements
 
-- macOS
 - Python 3.6+
-- Internet browser redirect must pass through `http://192.168.1.1/`
+- Internet browser redirect must pass through `http://192.168.1.1/` (It redirects to login paage by default)
 
 Install Python dependencies:
 
@@ -32,7 +31,6 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Aaravshah2907/College-Wifi-Login.git
-cd Wifi-login-v2
 ```
 
 Rename the `creds.py.example` file to `creds.py` and populate it with your credentials:
