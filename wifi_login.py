@@ -10,7 +10,7 @@ CHECK_URL = "http://clients3.google.com/generate_204"
 
 try:
     logupdate = creds.logupdate
-except NameError:
+except AttributeError:
     logupdate = False
 
 def is_connected():
