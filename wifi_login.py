@@ -14,7 +14,7 @@ def timeadd(string_url):
     timestamp = datetime.datetime.now().strftime('%d %m %H:%M:%S')  # Format as YYYY-MM-DD HH:MM:SS
     log_entry = f"[{timestamp}] {keepalivepage}"
     print(f"Adding {log_entry}")
-    with open("history_wifi_connection.txt", "a") as f:
+    with open("/Users/aaravshah2975/Documents/Code/history_wifi_connection.txt", "a") as f:
         f.write(keepalivepage + "\n")
     
 
