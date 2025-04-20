@@ -27,7 +27,7 @@ def is_connected():
 
 def extract_redirect_url(js_response):
     match = re.search(r'window\.location\s*=\s*"([^"]+)"', js_response)
-    return match.group(1) if match else None
+    return match.group(1) if match else js_response
 
 def attempt_login():
     # print("[*] Starting login attempt...")
