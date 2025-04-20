@@ -13,6 +13,14 @@ try:
 except AttributeError:
     logupdate = False
 
+def timeadd(string_url):
+    keepalivepage = extract_redirect_url(string_url)
+    timestamp = datetime.datetime.now().strftime('%d//%m//%Y %H:%M:%S')  # Format as YYYY-MM-DD HH:MM:SS
+    log_entry = f"[{timestamp}] {keepalivepage}"
+    with open("history_wifi_connection.txt", "a") as f:
+        f.write(keepalivepage + "\n")
+    
+
 def is_connected():
     try:
         response = requests.get(CHECK_URL, timeout=3)
@@ -77,9 +85,7 @@ def attempt_login():
     if "keepalive?" in login_resp.text or "success" in login_resp.text.lower():
         # print("✅ Logged in successfully!")
         if logupdate:
-            keepalivepage = extract_redirect_url(login_resp.text)
-            with open("history_wifi_connection.txt", "a") as f:
-                f.write(keepalivepage + "\n")
+            timeadd(login_resp.text)
         else:
             pass
         '''
