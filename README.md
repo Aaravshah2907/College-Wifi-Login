@@ -65,28 +65,6 @@ Run the script:
 
 This method is especially useful for users who prefer a command-line approach without directly invoking Python.
 
-## 🖥️ Alternative Method: macOS App (BETA)
-
-For users who prefer a simpler approach, this project includes a `.app` file that can be used to automate the login process with minimal effort.
-
-### Steps to Use:
-
-1. Ensure that the entire project is located at `~/Documents/Code/BITS-Wifi-Login`, and that the `creds.py` file within it contains your login credentials:
-
-   ```python
-   # creds.py
-   USERNAME = "your_username"
-   PASSWORD = "your_password"
-   ```
-
-2. Download the `.app` file from the repository's `releases` section.
-
-3. Move the `.app` file to your Applications folder or any preferred location.
-
-4. Double-click the `.app` file to execute the login process.
-
-This method is ideal for macOS users who want a quick and easy way to log in without interacting with the terminal.
-
 ## ❓ Why the Need for This Project?
 
 For macOS users, the default login process for the BITS Pilani WiFi network can be cumbersome. Each time the network is accessed, users are greeted with a login pop-up that requires manual input of credentials. This project eliminates the need for repetitive manual logins by automating the entire process, providing a seamless and efficient way to connect to the network.
