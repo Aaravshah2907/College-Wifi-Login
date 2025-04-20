@@ -9,11 +9,6 @@ import creds
 PORTAL_ENTRY = 'http://192.168.1.1'
 CHECK_URL = "http://clients3.google.com/generate_204"
 
-try:
-    logupdate = creds.logupdate
-except AttributeError:
-    logupdate = False
-
 def timeadd(string_url):
     keepalivepage = extract_redirect_url(string_url)
     timestamp = datetime.datetime.now().strftime('%d %m %H:%M:%S')  # Format as YYYY-MM-DD HH:MM:SS
@@ -86,9 +81,12 @@ def attempt_login():
 
     if "keepalive?" in login_resp.text or "success" in login_resp.text.lower():
         # print("✅ Logged in successfully!")
-        if logupdate:
-            timeadd(login_resp.text)
-        else:
+        try:
+            if creds.logupdate:
+                timeadd(login_resp.text)
+            else:
+                pass
+        except AttributeError:
             pass
         '''
         subprocess.run("pbcopy", text=True, input=keepalivepage)
