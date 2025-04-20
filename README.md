@@ -65,7 +65,7 @@ Run the script:
 
 This method is especially useful for users who prefer a command-line approach without directly invoking Python.
 
-## 🖥️ Alternative Method: macOS App
+## 🖥️ Alternative Method: macOS App (BETA)
 
 For users who prefer a simpler approach, this project includes a `.app` file that can be used to automate the login process with minimal effort.
 
