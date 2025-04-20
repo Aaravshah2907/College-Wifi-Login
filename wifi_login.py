@@ -97,7 +97,7 @@ def attempt_login():
         # print("❌ Login may have failed. Retrying...")
         return is_connected()
 
-def auto_login_until_connected(retry_interval=0.5):
+def auto_login_until_connected(retry_interval=0.01):
     # print("[*] Checking for internet connection...")
     while not is_connected():
         if attempt_login():
