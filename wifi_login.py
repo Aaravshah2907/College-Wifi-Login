@@ -2,6 +2,7 @@ import requests # type: ignore
 from bs4 import BeautifulSoup # type: ignore
 import time
 import re
+import datetime
 import creds
 # import subprocess
 
@@ -15,8 +16,9 @@ except AttributeError:
 
 def timeadd(string_url):
     keepalivepage = extract_redirect_url(string_url)
-    timestamp = datetime.datetime.now().strftime('%d//%m//%Y %H:%M:%S')  # Format as YYYY-MM-DD HH:MM:SS
+    timestamp = datetime.datetime.now().strftime('%d %m %H:%M:%S')  # Format as YYYY-MM-DD HH:MM:SS
     log_entry = f"[{timestamp}] {keepalivepage}"
+    print(f"Adding {log_entry}")
     with open("history_wifi_connection.txt", "a") as f:
         f.write(keepalivepage + "\n")
     
