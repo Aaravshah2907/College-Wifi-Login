@@ -76,8 +76,7 @@ def attempt_login():
 
     if "keepalive?" in login_resp.text or "success" in login_resp.text.lower():
         # print("✅ Logged in successfully!")
-        if creds.logupdate:
-            # print("🔗 Keep alive page URL:", login_resp.url)
+        if logupdate:
             keepalivepage = extract_redirect_url(login_resp.text)
             with open("history_wifi_connection.txt", "a") as f:
                 f.write(keepalivepage + "\n")
