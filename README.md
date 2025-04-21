@@ -16,7 +16,7 @@ This Python script automates login to the BITS Pilani WiFi network. The network 
 
 ## 🧰 Requirements
 
-- Python 3.6+
+- Python 3.9+
 - Internet browser redirect must pass through `http://192.168.1.1/` (It redirects to login page by default)
 
 Install Python dependencies:
@@ -49,7 +49,7 @@ python wifi_login.py
 
 ## 🌀 Alternative Method: Shell Script
 
-This project also provides a shell script for quick execution. After setting up your credentials in `creds.py`, you can use the `wifi_login.sh` script to automate the login process.
+This project also provides a shell script for quick execution. After setting up your credentials in `wifi_login.sh` on line 45 and 46, you can use the `wifi_login.sh` script to automate the login process.
 
 Make the script executable:
 
