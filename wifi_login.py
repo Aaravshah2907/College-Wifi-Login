@@ -4,16 +4,25 @@ import time
 import re
 import datetime
 import creds
-# import subprocess
+import subprocess
 
 PORTAL_ENTRY = 'http://192.168.1.1'
 CHECK_URL = "http://clients3.google.com/generate_204"
+wifi1 = 'BITS-STUDENT'
+wifi2 = 'BITS-STAFF'
+
+def get_wifi_ssid():
+    # The command to get the SSID
+    cmd = "ipconfig getsummary en0 | awk -F ' SSID : ' '/ SSID : / {print $2}'"
+    # Run the command in the shell and capture output
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    ssid = result.stdout.strip()
+    return ssid
 
 def timeadd(string_url):
     keepalivepage = extract_redirect_url(string_url)
     timestamp = datetime.datetime.now().strftime('%d %m %H:%M:%S')  # Format as YYYY-MM-DD HH:MM:SS
     log_entry = f"[{timestamp}] {keepalivepage}"
-    print(f"Adding {log_entry}")
     with open("/Users/aaravshah2975/Documents/Code/BITS-Wifi-Login/history_wifi_connection.txt", "a") as f:
         f.write(log_entry + "\n")
     
@@ -108,4 +117,6 @@ def auto_login_until_connected(retry_interval=0.01):
 
 
 if __name__ == "__main__":
-    auto_login_until_connected()
+    SSID = get_wifi_ssid()
+    if SSID == wifi1 or SSID == wifi2:
+        auto_login_until_connected()
