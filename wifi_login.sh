@@ -42,8 +42,8 @@ if [ "$MATCHED" = true ]; then
             MAGIC="${BASH_REMATCH[1]}"
 
             # 8. Send login payload
-            USERNAME="username"  # Replace with your username
-            PASSWORD="password"  # Replace with your password
+            USERNAME="username" # Change to your username
+            PASSWORD="paswword" # Change to your password
 
             FINAL_RESPONSE=$(curl -s -X POST "$REDIRECT_URL" \
                 -d "4Tredir=" \
@@ -51,16 +51,7 @@ if [ "$MATCHED" = true ]; then
                 -d "username=$USERNAME" \
                 -d "password=$PASSWORD")
 
-	    #EXTRACTED_URL=$(echo "$FINAL_RESPONSE" | grep -oE 'window.location="[^"]+"' | cut -d'"' -f2)
-	    # Get current timestamp in format: D M hh:mm:ss (e.g., 21 Apr 14:55:12)
-	    #TIMESTAMP=$(date "+%d %b %T")
-	    # Append to file
-        # Just for having a log of the connections
-        # Change the path to your desired log file location
-	    #echo "$TIMESTAMP $EXTRACTED_URL" >> ~/Documents/Code/BITS-Wifi-Login/history_wifi_connection.txt
-
-	    echo "Connected"
-
+            echo "Connected to the network successfully."
         else
             echo "Failed to extract magic token."
         fi

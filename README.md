@@ -25,6 +25,8 @@ Install Python dependencies:
 pip install -r requirements.txt
 ```
 
+---
+
 ## 🛠️ Setup
 
 Clone the repository:
@@ -47,6 +49,8 @@ Run the script:
 python wifi_login.py
 ```
 
+---
+
 ## 🌀 Alternative Method: Shell Script
 
 This project also provides a shell script for quick execution. After setting up your credentials in `wifi_login.sh` on line 45 and 46, you can use the `wifi_login.sh` script to automate the login process.
@@ -65,17 +69,71 @@ Run the script:
 
 This method is especially useful for users who prefer a command-line approach without directly invoking Python.
 
+---
+
+## 🖥️ Alternative Method: macOS App
+
+**1. Click "Finder"**
+<img src="./contents/2usnti1s.png">
+
+**2. Click "Applications"**
+<img src="./contents/kmo0zhzj.png">
+
+**3** **Click "Automator.app"**
+<img src="./contents/ag0jce50.png">
+
+**4. Click on 'Open an existing Document'.**
+<img src="./contents/ca3m0ml5.png">
+
+**5. Locate the 'Wiﬁ-Login.app'**
+<img src="./contents/u1uvpqkz.png">
+
+**6 Click "Wiﬁ-Login.app"**
+<img src="./contents/kwmyrdnf.png">
+
+**7. Click Open**
+<img src="./contents/rwyn303f.png">
+
+**8. Make sure shell is set to './bin/bash' and input set to 'to stdin'**
+<img src="./contents/fqquauji.png">
+
+**9. Click on USERNAME and enter your username inside the quotes.**
+<img src="./contents/u5irnmcy.png">
+
+**10. Click on PASSWORD and enter your password inside the quotes.**
+<img src="./contents/d3kobqnd.png">
+
+**11. Click "Run"**
+<img src="./contents/jhr5x0jx.png">
+
+**12. You should get this view at the bottom indicating no errors**
+<img src="./contents/yibrqktz.png">
+
+**13. Click "File"**
+<img src="./contents/i4cb4kvx.png">
+
+**14. Click "Save"**
+<img src="./contents/pcyja1cd.png">
+
+---
+
 ## ❓ Why the Need for This Project?
 
 For macOS users, the default login process for the BITS Pilani WiFi network can be cumbersome. Each time the network is accessed, users are greeted with a login pop-up that requires manual input of credentials. This project eliminates the need for repetitive manual logins by automating the entire process, providing a seamless and efficient way to connect to the network.
+
+---
 
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+---
 
 ## 🧑‍💻 Author
 
