@@ -16,7 +16,7 @@ This Python script automates login to the BITS Pilani WiFi network. The network 
 
 ## 🧰 Requirements
 
-- Python 3.9+
+- Python 3.10+
 - Internet browser redirect must pass through `http://192.168.1.1/` (It redirects to login page by default)
 
 Install Python dependencies:
@@ -73,47 +73,65 @@ This method is especially useful for users who prefer a command-line approach wi
 
 ## 🖥️ Alternative Method: macOS App
 
+**Note:** Download the `MAC_Users-v1.0.zip` from the [GitHub Releases](https://github.com/Aaravshah2907/College-Wifi-Login/releases) section. Unzip the file and relocate the extracted application to a location of your convenience for easy access.
+
 **1. Click "Finder"**
-<img src="./contents/2usnti1s.png">
+
+<p><img src="./contents/2usnti1s.png"></p>
 
 **2. Click "Applications"**
-<img src="./contents/kmo0zhzj.png">
 
-**3** **Click "Automator.app"**
-<img src="./contents/ag0jce50.png">
+<p><img src="./contents/kmo0zhzj.png"></p>
+
+**3. Click "Automator.app"**
+
+<p><img src="./contents/ag0jce50.png"></p>
 
 **4. Click on 'Open an existing Document'.**
-<img src="./contents/ca3m0ml5.png">
+
+<p><img src="./contents/ca3m0ml5.png"></p>
 
 **5. Locate the 'Wiﬁ-Login.app'**
-<img src="./contents/u1uvpqkz.png">
+
+<p><img src="./contents/u1uvpqkz.png"></p>
 
 **6 Click "Wiﬁ-Login.app"**
-<img src="./contents/kwmyrdnf.png">
+
+<p><img src="./contents/kwmyrdnf.png"></p>
 
 **7. Click Open**
-<img src="./contents/rwyn303f.png">
+
+<p><img src="./contents/rwyn303f.png"></p>
 
 **8. Make sure shell is set to './bin/bash' and input set to 'to stdin'**
-<img src="./contents/fqquauji.png">
+
+<p><img src="./contents/fqquauji.png"></p>
 
 **9. Click on USERNAME and enter your username inside the quotes.**
-<img src="./contents/u5irnmcy.png">
+
+<p><img src="./contents/u5irnmcy.png"></p>
 
 **10. Click on PASSWORD and enter your password inside the quotes.**
-<img src="./contents/d3kobqnd.png">
+
+<p><img src="./contents/d3kobqnd.png"></p>
 
 **11. Click "Run"**
-<img src="./contents/jhr5x0jx.png">
+
+<p><img src="./contents/jhr5x0jx.png"></p>
 
 **12. You should get this view at the bottom indicating no errors**
-<img src="./contents/yibrqktz.png">
+
+<p><img src="./contents/yibrqktz.png"></p>
 
 **13. Click "File"**
-<img src="./contents/i4cb4kvx.png">
+
+<p><img src="./contents/i4cb4kvx.png"></p>
 
 **14. Click "Save"**
-<img src="./contents/pcyja1cd.png">
+
+<p><img src="./contents/pcyja1cd.png"></p>
+
+> **⚠️ Note:** Since the application is downloaded from GitHub, macOS may block it from running initially. To allow the application to run, go to **System Preferences > Security & Privacy > General**, and click **Allow Anyway** for the blocked app. Then, try running the application again.
 
 ---
 
