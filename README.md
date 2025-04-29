@@ -141,6 +141,61 @@ For macOS users, the default login process for the BITS Pilani WiFi network can 
 
 ---
 
+## 🎁 Bonus: Automate macOS App on Startup and Periodically
+
+To ensure seamless connectivity, you can configure the macOS app to run automatically at startup and every 10,000 seconds.
+
+### Automate on Startup
+
+1. Open the `System Settings` on your macOS.
+2. Navigate to **General > Login Items**.
+3. Click the `+` button under the **Open at Login** section.
+4. Locate and select the `.app` file from its location (e.g., `~/Documents/Code/BITS-Wifi-Login`).
+5. The app will now run automatically every time you log in to your macOS.
+
+### Automate Every 10,000 Seconds
+
+1. Open the `Terminal` and create a new `launchd` plist file:
+
+   ```bash
+   nano ~/Library/LaunchAgents/com.bitswifi.autologin.plist
+   ```
+
+2. Add the following content to the file:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+   <key>Label</key>
+   <string>com.username.myautomatorapp</string>
+   <key>ProgramArguments</key>
+   <array>
+      <string>/path/to/your/Wifi-Login.app/Contents/MacOS/Automator Application Stub</string>
+   </array>
+   <key>StartInterval</key>
+   <integer>12000</integer>
+   <key>RunAtLoad</key>
+   <true/>
+   </dict>
+   </plist>
+   ```
+
+   Replace `/path/to/your/app/Wifi-Login` with the actual path to the `.app` file. Replace `username` with your MAC's username.
+
+3. Save and exit the file (`Ctrl+X`, `y`, `Enter`).
+
+4. Load the plist file into `launchd`:
+
+   ```bash
+   launchctl load ~/Library/LaunchAgents/com.bitswifi.autologin.plist
+   ```
+
+The app will now run automatically every 12,000 seconds and at startup, ensuring uninterrupted connectivity.
+
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
