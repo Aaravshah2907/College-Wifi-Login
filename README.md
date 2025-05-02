@@ -153,7 +153,7 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
 4. Locate and select the `.app` file from its location (e.g., `~/Documents/Code/BITS-Wifi-Login`).
 5. The app will now run automatically every time you log in to your macOS.
 
-### Automate Every 10,000 Seconds
+### Automate Every 2,000 Seconds
 
 1. Open the `Terminal` and create a new `launchd` plist file:
 
@@ -169,20 +169,20 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
    <plist version="1.0">
    <dict>
    <key>Label</key>
-   <string>com.username.myautomatorapp</string>
+   <string>com.bitswifi.autologin</string>
    <key>ProgramArguments</key>
    <array>
       <string>/path/to/your/Wifi-Login.app/Contents/MacOS/Automator Application Stub</string>
    </array>
    <key>StartInterval</key>
-   <integer>12000</integer>
+   <integer>2000</integer>
    <key>RunAtLoad</key>
    <true/>
    </dict>
    </plist>
    ```
 
-   Replace `/path/to/your/app/Wifi-Login` with the actual path to the `.app` file. Replace `username` with your MAC's username.
+   Replace `/path/to/your/app/Wifi-Login` with the actual path to the `.app` file.
 
 3. Save and exit the file (`Ctrl+X`, `y`, `Enter`).
 
