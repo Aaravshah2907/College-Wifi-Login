@@ -3,3 +3,4 @@ history_wifi_connection.txt
 __pycache__/
 *.pyc
 bonus_content.txt
+.idea
