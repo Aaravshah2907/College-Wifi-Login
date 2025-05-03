@@ -195,6 +195,32 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
 The app will now run automatically every 12,000 seconds and at startup, ensuring uninterrupted connectivity.
 
 ---
+## Automate execution of `wifi_login.sh` on Linux with systemd-timer
+
+1. After setting up credentials in `wifi_login.sh` on line 45 and 46, as root or with sudo execute: 
+
+    ```bash
+    sudo mv wifi_login.sh /usr/local/bin/
+    ```
+2. Move the systemd files to their locations as root or with sudo:
+
+    ```bash
+    sudo mv systemd/wifi_login.service systemd/wifi_login.timer /etc/systemd/system/
+    ```
+
+3. Enable and Start the timer: 
+    ```bash
+    sudo systemctl daemon-reexec
+    sudo systemctl daemon-reload
+    sudo systemctl enable --now wifi_login.timer
+    ```
+    This will start a systemd-timer which will run `wifi_login.sh` every 12,000 seconds starting at boot.
+4. Check status if the timer is running with:
+    ```
+    systemctl list-timers --all
+    ```
+
+---
 
 ## 📜 License
 
