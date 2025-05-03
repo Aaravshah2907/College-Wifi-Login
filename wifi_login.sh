@@ -43,7 +43,7 @@ if [ "$MATCHED" = true ]; then
 
             # 8. Send login payload
             USERNAME="username" # Change to your username
-            PASSWORD="paswword" # Change to your password
+            PASSWORD="password" # Change to your password
 
             FINAL_RESPONSE=$(curl -s -X POST "$REDIRECT_URL" \
                 -d "4Tredir=" \
