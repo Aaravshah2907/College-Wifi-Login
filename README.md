@@ -214,7 +214,7 @@ The app will now run automatically every 12,000 seconds and at startup, ensuring
     sudo systemctl daemon-reload
     sudo systemctl enable --now wifi_login.timer
     ```
-    This will start a systemd-timer which will run `wifi_login.sh` every 12,000 seconds starting at boot.
+    This will start a systemd-timer which will run `wifi_login.sh` every 2000 seconds starting at boot.
 4. Check status if the timer is running with:
     ```
     systemctl list-timers --all

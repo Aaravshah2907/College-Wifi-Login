@@ -1,5 +1,5 @@
 [Unit]
-Description=Run wifi_login.sh every 120000 seconds
+Description=Run wifi_login.sh every 2000 seconds
 
 [Service]
 Type=oneshot
