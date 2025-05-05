@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to run wifi_login.sh every 12000 seconds
+
+[Timer]
+OnBootSec=2000s
+OnUnitActiveSec=2000s
+Unit=wifi_login.service
+
+[Install]
+WantedBy=timers.target

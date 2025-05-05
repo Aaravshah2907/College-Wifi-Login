@@ -1,0 +1,8 @@
+[Unit]
+Description=Run wifi_login.sh every 2000 seconds
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/wifi_login.sh
+
+
