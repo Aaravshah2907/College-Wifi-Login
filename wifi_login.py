@@ -10,6 +10,7 @@ PORTAL_ENTRY = 'http://192.168.1.1'
 CHECK_URL = "http://clients3.google.com/generate_204"
 wifi1 = 'BITS-STUDENT'
 wifi2 = 'BITS-STAFF'
+wifi3 = '<redacted>'
 
 def get_wifi_ssid():
     # The command to get the SSID
@@ -113,10 +114,10 @@ def auto_login_until_connected(retry_interval=0.01):
             break
         # print(f"🔁 Retrying in {retry_interval} seconds...\n")
         time.sleep(retry_interval)
-    # print("🌐 Internet is up!")
+    print("🌐 Internet is up!")
 
 
 if __name__ == "__main__":
     SSID = get_wifi_ssid()
-    if SSID == wifi1 or SSID == wifi2:
+    if SSID == wifi1 or SSID == wifi2 or SSID == wifi3:
         auto_login_until_connected()
