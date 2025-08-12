@@ -4,7 +4,7 @@
 SSID=$(ipconfig getsummary en0 | awk -F ' SSID : ' '/ SSID : / {print $2}')
 
 # 2. List of known SSIDs
-KNOWN_SSIDS=("BITS-STAFF" "BITS-STUDENT")
+KNOWN_SSIDS=("BITS-STAFF" "BITS-STUDENT" "<redacted>")
 
 # 3. Check for matching SSID
 MATCHED=false
