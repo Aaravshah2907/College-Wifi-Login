@@ -38,19 +38,19 @@ def extract_redirect_url(js_response):
     return match.group(1) if match else js_response
 
 def attempt_login():
-    # print("[*] Starting login attempt...")
+    print("[*] Starting login attempt...")
     session = requests.Session()
 
     try:
         resp = session.get(PORTAL_ENTRY, timeout=5)
         redirect_url = extract_redirect_url(resp.text)
         if not redirect_url:
-            # print("[!] Could not find JavaScript redirect.")
+            print("[!] Could not find JavaScript redirect.")
             return is_connected()
 
-        # print(f"➡️ Redirected to: {redirect_url}")
+        print(f"➡️ Redirected to: {redirect_url}")
     except requests.RequestException as e:
-        # print(f"[!] Initial request failed: {e}")
+        print(f"[!] Initial request failed: {e}")
         return False
 
     try:
@@ -70,7 +70,7 @@ def attempt_login():
         redir = ''
 
     if not magic or not redir:
-        #print("[!] Required fields missing. Aborting.")
+        print("[!] Required fields missing. Aborting.")
         return False
 
     post_url = login_page.url
@@ -84,11 +84,11 @@ def attempt_login():
     try:
         login_resp = session.post(post_url, data=payload, timeout=5)
     except requests.RequestException as e:
-        # print("[!] Login POST failed:", e)
+        print("[!] Login POST failed:", e)
         return False
 
     if "keepalive?" in login_resp.text or "success" in login_resp.text.lower():
-        # print("✅ Logged in successfully!")
+        print("✅ Logged in successfully!")
         try:
             if creds.logupdate:
                 timeadd(login_resp.text)
@@ -102,15 +102,15 @@ def attempt_login():
         '''
         return True
     else:
-        # print("❌ Login may have failed. Retrying...")
+        print("❌ Login may have failed. Retrying...")
         return is_connected()
 
 def auto_login_until_connected(retry_interval=0.01):
-    # print("[*] Checking for internet connection...")
+    print("[*] Checking for internet connection...")
     while not is_connected():
         if attempt_login():
             break
-        # print(f"🔁 Retrying in {retry_interval} seconds...\n")
+        print(f"🔁 Retrying in {retry_interval} seconds...\n")
         time.sleep(retry_interval)
     print("🌐 Internet is up!")
 
