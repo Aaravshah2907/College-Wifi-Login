@@ -1,3 +1,7 @@
+> NOTE:
+> The Newer Version is Updated for The Python & Shell File. The New release version (Automator Application v2) should be updated by the weekend.
+>
+
 # 🔐 Auto WiFi Login for BITS Pilani
 
 This Python script automates login to the BITS Pilani WiFi network. The network portal link (`http://192.168.1.1/`) is essentially the self IP address of the router, which automatically redirects users to the network's login page. The script handles this dynamic redirect process by extracting the required `4Tredir` parameter, sending login credentials via a POST request, and verifying internet connectivity.

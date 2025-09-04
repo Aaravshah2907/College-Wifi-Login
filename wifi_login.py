@@ -8,9 +8,7 @@ import subprocess
 
 PORTAL_ENTRY = 'http://192.168.1.1'
 CHECK_URL = "http://clients3.google.com/generate_204"
-wifi1 = 'BITS-STUDENT'
-wifi2 = 'BITS-STAFF'
-wifi3 = '<redacted>'
+wifi_list = ['BITS-STUDENT', 'BITS-STAFF', '<redacted>']
 
 def get_wifi_ssid():
     # The command to get the SSID
@@ -119,5 +117,5 @@ def auto_login_until_connected(retry_interval=0.01):
 
 if __name__ == "__main__":
     SSID = get_wifi_ssid()
-    if SSID == wifi1 or SSID == wifi2 or SSID == wifi3:
+    if SSID in wifi_list:
         auto_login_until_connected()
