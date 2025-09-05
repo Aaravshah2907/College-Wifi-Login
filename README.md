@@ -1,5 +1,7 @@
-> NOTE:
-> The Newer Version is Updated for The Python & Shell File. The New release version (Automator Application v2) should be updated by the weekend.
+
+## NOTE
+
+> The Newer Version is Updated for The Python & Shell File. The New release version (Automator Application v2) has been updated and uploaded.
 >
 
 # 🔐 Auto WiFi Login for BITS Pilani
@@ -77,7 +79,7 @@ This method is especially useful for users who prefer a command-line approach wi
 
 ## 🖥️ Alternative Method: macOS App
 
-**Note:** Download the `MAC_Users-v1.0.zip` from the [GitHub Releases](https://github.com/Aaravshah2907/College-Wifi-Login/releases) section. Unzip the file and relocate the extracted application to a location of your convenience for easy access.
+**Note:** Download the `MAC_Users-v2.0.zip` from the [GitHub Releases](https://github.com/Aaravshah2907/College-Wifi-Login/releases) section. Unzip the file and relocate the extracted application to a location of your convenience for easy access.
 
 **1. Click "Finder"**
 
@@ -157,7 +159,7 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
 4. Locate and select the `.app` file from its location (e.g., `~/Documents/Code/BITS-Wifi-Login`).
 5. The app will now run automatically every time you log in to your macOS.
 
-### Automate Every 2,000 Seconds
+### Automate Every 3,600 Seconds
 
 1. Open the `Terminal` and create a new `launchd` plist file:
 
@@ -179,7 +181,7 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
       <string>/path/to/your/Wifi-Login.app/Contents/MacOS/Automator Application Stub</string>
    </array>
    <key>StartInterval</key>
-   <integer>2000</integer>
+   <integer>3600</integer>
    <key>RunAtLoad</key>
    <true/>
    </dict>
@@ -196,7 +198,7 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
    launchctl load ~/Library/LaunchAgents/com.bitswifi.autologin.plist
    ```
 
-The app will now run automatically every 12,000 seconds and at startup, ensuring uninterrupted connectivity.
+The app will now run automatically every 3,600 seconds and at startup, ensuring uninterrupted connectivity.
 
 ---
 ## Automate execution of `wifi_login.sh` on Linux with systemd-timer

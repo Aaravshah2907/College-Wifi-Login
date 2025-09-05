@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 bonus_content.txt
 .idea
+.vscode
+env/
