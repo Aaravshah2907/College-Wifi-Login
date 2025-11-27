@@ -6,3 +6,4 @@ bonus_content.txt
 .idea
 .vscode
 env/
+.DS_Store

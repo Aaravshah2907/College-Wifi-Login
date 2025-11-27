@@ -81,59 +81,59 @@ This method is especially useful for users who prefer a command-line approach wi
 
 **Note:** Download the `MAC_Users-v2.0.zip` from the [GitHub Releases](https://github.com/Aaravshah2907/College-Wifi-Login/releases) section. Unzip the file and relocate the extracted application to a location of your convenience for easy access.
 
-**1. Click "Finder"**
+### 1. Click "Finder"
 
-<p><img src="./contents/2usnti1s.png"></p>
+<p><img src="./contents/2usnti1s.png" alt="Image"></p>
 
-**2. Click "Applications"**
+### 2. Click "Applications"
 
 <p><img src="./contents/kmo0zhzj.png"></p>
 
-**3. Click "Automator.app"**
+### 3. Click "Automator.app"
 
 <p><img src="./contents/ag0jce50.png"></p>
 
-**4. Click on 'Open an existing Document'.**
+### 4. Click on 'Open an existing Document'
 
 <p><img src="./contents/ca3m0ml5.png"></p>
 
-**5. Locate the 'Wiﬁ-Login.app'**
+### 5. Locate the 'Wiﬁ-Login.app'
 
 <p><img src="./contents/u1uvpqkz.png"></p>
 
-**6 Click "Wiﬁ-Login.app"**
+### 6 Click "Wiﬁ-Login.app"
 
 <p><img src="./contents/kwmyrdnf.png"></p>
 
-**7. Click Open**
+### 7. Click Open
 
 <p><img src="./contents/rwyn303f.png"></p>
 
-**8. Make sure shell is set to './bin/bash' and input set to 'to stdin'**
+### 8. Make sure shell is set to './bin/bash' and input set to 'to stdin'
 
 <p><img src="./contents/fqquauji.png"></p>
 
-**9. Click on USERNAME and enter your username inside the quotes.**
+### 9. Click on USERNAME and enter your username inside the quotes
 
 <p><img src="./contents/u5irnmcy.png"></p>
 
-**10. Click on PASSWORD and enter your password inside the quotes.**
+### 10. Click on PASSWORD and enter your password inside the quotes
 
 <p><img src="./contents/d3kobqnd.png"></p>
 
-**11. Click "Run"**
+### 11. Click "Run".
 
 <p><img src="./contents/jhr5x0jx.png"></p>
 
-**12. You should get this view at the bottom indicating no errors**
+### 12. You should get this view at the bottom indicating no errors
 
 <p><img src="./contents/yibrqktz.png"></p>
 
-**13. Click "File"**
+### 13. Click "File"
 
 <p><img src="./contents/i4cb4kvx.png"></p>
 
-**14. Click "Save"**
+### 14. Click "Save"
 
 <p><img src="./contents/pcyja1cd.png"></p>
 
@@ -201,28 +201,33 @@ To ensure seamless connectivity, you can configure the macOS app to run automati
 The app will now run automatically every 3,600 seconds and at startup, ensuring uninterrupted connectivity.
 
 ---
+
 ## Automate execution of `wifi_login.sh` on Linux with systemd-timer
 
-1. After setting up credentials in `wifi_login.sh` on line 45 and 46, as root or with sudo execute: 
+1. After setting up credentials in `wifi_login.sh` on line 45 and 46, as root or with sudo execute:
 
     ```bash
     sudo mv wifi_login.sh /usr/local/bin/
     ```
+
 2. Move the systemd files to their locations as root or with sudo:
 
     ```bash
     sudo mv systemd/wifi_login.service systemd/wifi_login.timer /etc/systemd/system/
     ```
 
-3. Enable and Start the timer: 
+3. Enable and Start the timer:
+
     ```bash
     sudo systemctl daemon-reexec
     sudo systemctl daemon-reload
     sudo systemctl enable --now wifi_login.timer
     ```
+
     This will start a systemd-timer which will run `wifi_login.sh` every 2000 seconds starting at boot.
 4. Check status if the timer is running with:
-    ```
+
+    ```bash
     systemctl list-timers --all
     ```
 
