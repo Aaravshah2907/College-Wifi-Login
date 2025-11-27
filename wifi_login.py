@@ -12,18 +12,9 @@ import platform # Added for cross-platform OS detection
 PORTAL_ENTRY = 'http://192.168.1.1'
 CHECK_URL = "https://www.google.com/robots.txt" 
 wifi_list = ['BITS-STUDENT', 'BITS-STAFF', '<redacted>']
-
-# --- Logging Configuration (Updated for Device Independence) ---
-# This file will be created in the same directory as the script.
 LOG_FILE_PATH = "./history_wifi_connection.txt"
 
-# --- Helper Functions ---
-
 def get_wifi_ssid():
-    """
-    Detects the operating system and runs the appropriate command to get the current Wi-Fi SSID.
-    Supports macOS, Windows, and Linux.
-    """
     os_type = platform.system()
     ssid = ""
     cmd = ""
